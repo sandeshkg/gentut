@@ -19,3 +19,8 @@ timestamp,agent,student_message,raw_output,valid,parsed_state,error
   ""reasoning"": ""Student is still developing understanding of loops, and hint stage is 1; a hint is necessary to guide them towards mastery."",
   ""target_misconception"": ""may not fully grasp loop control structures""
 }",True,"{'next_action': 'give_hint', 'reasoning': 'Student is still developing understanding of loops, and hint stage is 1; a hint is necessary to guide them towards mastery.', 'target_misconception': 'may not fully grasp loop control structures'}",
+2026-08-08 16:01:12,content_creator,I don't understand why my for loop never terminates.,"{
+  ""content_type"": ""hint"",
+  ""message"": ""Remember, a loop will continue to run as long as its condition is `true`. What needs to happen inside your loop for that condition to eventually become `false` and allow the loop to stop?"",
+  ""difficulty_note"": ""Hint focuses on the mechanism of loop termination and condition change for a novice at hint_stage 2.""
+}",True,"{'content_type': 'hint', 'message': 'Remember, a loop will continue to run as long as its condition is `true`. What needs to happen inside your loop for that condition to eventually become `false` and allow the loop to stop?', 'difficulty_note': 'Hint focuses on the mechanism of loop termination and condition change for a novice at hint_stage 2.'}",

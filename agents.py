@@ -89,3 +89,45 @@ def profiler_agent(state: CognitiveState, model, tokenizer):
         return action, raw
     except Exception:
         return None, raw
+
+from schemas import TutorContent
+import google.generativeai as genai
+
+def build_content_creator_prompt(state: CognitiveState, action: TutorAction) -> str:
+    example = TutorContent(
+        content_type="hint",
+        message="Take a look at your loop's condition — does it ever change inside the loop body? If not, that's why it never ends.",
+        difficulty_note="Keep hint conceptual, avoid giving the full answer directly."
+    ).model_dump_json(indent=2)
+
+    return f"""You are a Content Creator agent in a tutoring system. Generate the actual tutoring content to show the student, based on their cognitive state and the chosen tutor action.
+
+Output ONLY a raw JSON object. No prose, no markdown code fences, no explanation before or after.
+
+Field rules:
+- content_type: MUST match the tutor action's intent, one of: "hint", "clarifying_question", "new_content", "mastery_message"
+- message: the actual text shown to the student. Be encouraging, concise, and pedagogically sound — guide the student toward understanding rather than giving away the full answer, unless content_type is "mastery_message".
+- difficulty_note: a short internal note on pacing, or null
+
+Example of a correctly formatted output:
+{example}
+
+Student's current state:
+{state.model_dump_json(indent=2)}
+
+Chosen tutor action:
+{action.model_dump_json(indent=2)}
+
+JSON output:"""
+
+def content_creator_agent(state: CognitiveState, action: TutorAction, gemini_model) -> tuple:
+    """Returns (content, raw_output). content is None if validation failed."""
+    prompt = build_content_creator_prompt(state, action)
+    response = gemini_model.generate_content(prompt)
+    raw = response.text
+    cleaned = extract_json(raw)
+    try:
+        content = TutorContent.model_validate_json(cleaned)
+        return content, raw
+    except Exception:
+        return None, raw

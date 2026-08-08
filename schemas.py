@@ -13,3 +13,8 @@ class TutorAction(BaseModel):
     next_action: Literal["give_hint", "ask_clarifying_question", "present_new_content", "mark_mastered"]
     reasoning: str = Field(description="Brief explanation of why this action was chosen")
     target_misconception: Optional[str] = Field(default=None, description="Which misconception this action addresses, if any")
+
+class TutorContent(BaseModel):
+    content_type: Literal["hint", "clarifying_question", "new_content", "mastery_message"]
+    message: str = Field(description="The actual text shown to the student")
+    difficulty_note: Optional[str] = Field(default=None, description="Internal note on pacing/difficulty, not shown to student")
