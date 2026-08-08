@@ -18,3 +18,11 @@ class TutorContent(BaseModel):
     content_type: Literal["hint", "clarifying_question", "new_content", "mastery_message"]
     message: str = Field(description="The actual text shown to the student")
     difficulty_note: Optional[str] = Field(default=None, description="Internal note on pacing/difficulty, not shown to student")
+
+class GraphState(BaseModel):
+    student_message: str = ""
+    cognitive_state: Optional[CognitiveState] = None
+    tutor_action: Optional[TutorAction] = None
+    tutor_content: Optional[TutorContent] = None
+    conversation_history: List[str] = Field(default_factory=list)
+    turn_count: int = 0
