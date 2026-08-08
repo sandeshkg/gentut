@@ -24,3 +24,15 @@ timestamp,agent,student_message,raw_output,valid,parsed_state,error
   ""message"": ""Remember, a loop will continue to run as long as its condition is `true`. What needs to happen inside your loop for that condition to eventually become `false` and allow the loop to stop?"",
   ""difficulty_note"": ""Hint focuses on the mechanism of loop termination and condition change for a novice at hint_stage 2.""
 }",True,"{'content_type': 'hint', 'message': 'Remember, a loop will continue to run as long as its condition is `true`. What needs to happen inside your loop for that condition to eventually become `false` and allow the loop to stop?', 'difficulty_note': 'Hint focuses on the mechanism of loop termination and condition change for a novice at hint_stage 2.'}",
+2026-08-08 16:04:46,content_creator,"I think I understand for loops now, can I try something harder?","```json
+{
+  ""content_type"": ""hint"",
+  ""message"": ""When you set up a loop, what condition needs to be met for it to continue, and what makes it eventually stop?"",
+  ""difficulty_note"": ""First stage hint focusing on the conceptual role of a loop's stopping condition.""
+}
+```",True,"{'content_type': 'hint', 'message': 'When you set up a loop, what condition needs to be met for it to continue, and what makes it eventually stop?', 'difficulty_note': ""First stage hint focusing on the conceptual role of a loop's stopping condition.""}",
+2026-08-08 16:05:04,content_creator,What's the difference between a list and a tuple?,"{
+  ""content_type"": ""clarifying_question"",
+  ""message"": ""When we say a data type is 'immutable,' what does that mean for how you can interact with its elements after it's been created?"",
+  ""difficulty_note"": ""Probe understanding of immutability without directly defining it, tying it to interaction rather than just 'cannot change'.""
+}",True,"{'content_type': 'clarifying_question', 'message': ""When we say a data type is 'immutable,' what does that mean for how you can interact with its elements after it's been created?"", 'difficulty_note': ""Probe understanding of immutability without directly defining it, tying it to interaction rather than just 'cannot change'.""}",
