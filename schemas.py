@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Literal, List
+from typing import Literal, List, Optional
 
 class CognitiveState(BaseModel):
     student_id: str
@@ -8,3 +8,8 @@ class CognitiveState(BaseModel):
     misconceptions: List[str] = Field(default_factory=list)
     hint_stage: int = Field(0, description="0=no hint given, increments per escalating hint")
     mastery_score: float = Field(0.0, ge=0.0, le=1.0)
+
+class TutorAction(BaseModel):
+    next_action: Literal["give_hint", "ask_clarifying_question", "present_new_content", "mark_mastered"]
+    reasoning: str = Field(description="Brief explanation of why this action was chosen")
+    target_misconception: Optional[str] = Field(default=None, description="Which misconception this action addresses, if any")
