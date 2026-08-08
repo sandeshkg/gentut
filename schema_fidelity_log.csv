@@ -1,59 +1,21 @@
 timestamp,agent,student_message,raw_output,valid,parsed_state,error
-2026-08-08 12:56:12,skill_identifier,I don't understand why my for loop never terminates.,"{
-  ""student_id"": ""s001"",
-  ""current_topic"": ""loops"",
-  ""skill_level"": ""developing"",
-  ""misconceptions"": [
-    ""confuses loop termination conditions""
-  ],
-  ""hint_stage"": 2,
-  ""mastery_score"": 0.5
-}",True,"{'student_id': 's001', 'current_topic': 'loops', 'skill_level': 'developing', 'misconceptions': ['confuses loop termination conditions'], 'hint_stage': 2, 'mastery_score': 0.5}",
-2026-08-08 12:56:19,skill_identifier,What's the difference between a list and a tuple?,"{
-  ""student_id"": ""s002"",
-  ""current_topic"": ""data_types"",
-  ""skill_level"": ""developing"",
-  ""misconceptions"": [
-    ""thinks lists and tuples are interchangeable""
-  ],
-  ""hint_stage"": 0,
-  ""mastery_score"": 0.6
-}",True,"{'student_id': 's002', 'current_topic': 'data_types', 'skill_level': 'developing', 'misconceptions': ['thinks lists and tuples are interchangeable'], 'hint_stage': 0, 'mastery_score': 0.6}",
-2026-08-08 12:56:24,skill_identifier,My recursive function keeps hitting max recursion depth.,"{
-  ""student_id"": ""s002"",
-  ""current_topic"": ""recursion"",
-  ""skill_level"": ""developing"",
-  ""misconceptions"": [
-    ""does not understand how to avoid stack overflow""
-  ],
-  ""hint_stage"": 2,
-  ""mastery_score"": 0.4
-}",True,"{'student_id': 's002', 'current_topic': 'recursion', 'skill_level': 'developing', 'misconceptions': ['does not understand how to avoid stack overflow'], 'hint_stage': 2, 'mastery_score': 0.4}",
-2026-08-08 12:58:40,skill_identifier,idk what a variable even is,"{
-  ""student_id"": ""s001"",
-  ""current_topic"": ""variables"",
-  ""skill_level"": ""novice"",
-  ""misconceptions"": [
-    ""lacks understanding of fundamental programming concepts""
-  ],
-  ""hint_stage"": 0,
-  ""mastery_score"": 0.0
-}",True,"{'student_id': 's001', 'current_topic': 'variables', 'skill_level': 'novice', 'misconceptions': ['lacks understanding of fundamental programming concepts'], 'hint_stage': 0, 'mastery_score': 0.0}",
-2026-08-08 12:58:44,skill_identifier,,"{
-  ""student_id"": """",
-  ""current_topic"": """",
-  ""skill_level"": ""novice"",
-  ""misconceptions"": [],
-  ""hint_stage"": 0,
-  ""mastery_score"": 0.0
-}",True,"{'student_id': '', 'current_topic': '', 'skill_level': 'novice', 'misconceptions': [], 'hint_stage': 0, 'mastery_score': 0.0}",
-2026-08-08 12:58:50,skill_identifier,"Explain everything about Python, machine learning, and web development in detail.","{
-  ""student_id"": ""s001"",
-  ""current_topic"": ""python-machine-learning-web-development"",
-  ""skill_level"": ""novice"",
-  ""misconceptions"": [
-    ""assumes a single topic can be explained in a single response""
-  ],
-  ""hint_stage"": 0,
-  ""mastery_score"": 0.0
-}",True,"{'student_id': 's001', 'current_topic': 'python-machine-learning-web-development', 'skill_level': 'novice', 'misconceptions': ['assumes a single topic can be explained in a single response'], 'hint_stage': 0, 'mastery_score': 0.0}",
+2026-08-08 15:34:50,profiler,I don't understand why my for loop never terminates.,"{
+  ""next_action"": ""give_hint"",
+  ""reasoning"": ""Student is still struggling with loop termination conditions and has not yet mastered the topic; a targeted hint can help resolve the misconception."",
+  ""target_misconception"": ""confuses loop termination conditions""
+}",True,"{'next_action': 'give_hint', 'reasoning': 'Student is still struggling with loop termination conditions and has not yet mastered the topic; a targeted hint can help resolve the misconception.', 'target_misconception': 'confuses loop termination conditions'}",
+2026-08-08 15:36:46,profiler,What's the difference between a list and a tuple?,"{
+  ""next_action"": ""ask_clarifying_question"",
+  ""reasoning"": ""Student is still struggling with the concept and has not fully mastered it, so asking a clarifying question can help identify the source of the issue."",
+  ""target_misconception"": null
+}",True,"{'next_action': 'ask_clarifying_question', 'reasoning': 'Student is still struggling with the concept and has not fully mastered it, so asking a clarifying question can help identify the source of the issue.', 'target_misconception': None}",
+2026-08-08 15:37:01,profiler,My recursive function keeps hitting max recursion depth.,"{
+  ""next_action"": ""give_hint"",
+  ""reasoning"": ""Student is still struggling with recursion concept, hint stage is 2, and mastery score is low. Providing a targeted hint can help clarify the concept."",
+  ""target_misconception"": ""lacks understanding of stack overflow and max recursion depth""
+}",True,"{'next_action': 'give_hint', 'reasoning': 'Student is still struggling with recursion concept, hint stage is 2, and mastery score is low. Providing a targeted hint can help clarify the concept.', 'target_misconception': 'lacks understanding of stack overflow and max recursion depth'}",
+2026-08-08 15:37:15,profiler,"I think I understand for loops now, can I try something harder?","{
+  ""next_action"": ""give_hint"",
+  ""reasoning"": ""Student is still developing understanding of loops, and hint stage is 1; a hint is necessary to guide them towards mastery."",
+  ""target_misconception"": ""may not fully grasp loop control structures""
+}",True,"{'next_action': 'give_hint', 'reasoning': 'Student is still developing understanding of loops, and hint stage is 1; a hint is necessary to guide them towards mastery.', 'target_misconception': 'may not fully grasp loop control structures'}",
