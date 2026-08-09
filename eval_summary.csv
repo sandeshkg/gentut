@@ -1,0 +1,8 @@
+Metric,Result
+Schema Fidelity — Skill Identifier,100.0%
+Schema Fidelity — Profiler,100.0%
+Schema Fidelity — Content Creator,100.0%
+"Pedagogical Quality (avg, LLM-judge)",4.80 / 5
+Learning Gain Delta (avg across 3 sessions),+0.22
+Latency (avg per turn),14.73s
+Latency (max),16.50s
